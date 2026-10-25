@@ -1,13 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cache Out</title>
+    <title>Cache Out — Cache's story</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./Fts.css" />
   </head>
   <body>
     <div id="menuScreen" class="screen-shell">
@@ -15,33 +14,33 @@
       <header class="top-bar">
         <div class="brand">
           <span class="brand-mark">&lt;/&gt;</span>
-          <span>Cache Out this out bih </span>
+          <span>Cache Out</span>
         </div>
-        <div class="status">System // Active</div>
+        <div class="status">Still here // Together</div>
       </header>
 
       <div class="menu-scraps">
-        <span>bad splice</span>
-        <span>pitted alloy</span>
-        <span>relay noise</span>
-        <span>sector 7</span>
-        <span>burnt casing</span>
+        <span>a half-remembered song</span>
+        <span>someone left the lights on</span>
+        <span>keep going, okay?</span>
+        <span>one more try</span>
+        <span>maybe there's a way home</span>
       </div>
 
       <main class="main-layout">
         <section class="hero-panel panel">
           <div class="title-block">
-            <p class="eyebrow">Boot sector breach</p>
+            <p class="eyebrow">A small story about finding your way home</p>
             <h1>Cache Out</h1>
           </div>
 
           <p class="subtitle">
-            A rogue process cutting through a dead machine. Slip past the antivirus grid and find the path out.
+            Cache woke up alone inside a machine that forgot the world outside. Help them find a way out—and maybe find out who they are along the way.
           </p>
 
           <div class="button-stack">
-            <button id="playButton" class="cyber-btn primary">Play</button>
-            <button id="settingsButton" class="cyber-btn secondary">Settings</button>
+            <button id="playButton" class="cyber-btn primary">Begin the escape</button>
+            <button id="settingsButton" class="cyber-btn secondary">Make it yours</button>
           </div>
         </section>
       </main>
@@ -50,26 +49,26 @@
     <div id="settingsOverlay" class="overlay hidden">
       <div class="settings-panel">
         <div class="settings-head">
-          <span class="eyebrow">System config</span>
-          <h2>Machine memos</h2>
+          <span class="eyebrow">A few little comforts</span>
+          <h2>Make yourself at home</h2>
         </div>
 
         <div class="settings-list">
           <button class="setting-row" data-setting="noise" type="button">
-            <span class="label">Noise floor</span>
+            <span class="label">Screen grain</span>
             <span class="value">Low</span>
           </button>
           <button class="setting-row" data-setting="rust" type="button">
-            <span class="label">Rust shell</span>
+            <span class="label">Warm colors</span>
             <span class="value">On</span>
           </button>
           <button class="setting-row" data-setting="scan" type="button">
-            <span class="label">Scan lines</span>
+            <span class="label">Screen texture</span>
             <span class="value">On</span>
           </button>
         </div>
 
-        <button id="closeSettingsButton" class="cyber-btn secondary" type="button">Close</button>
+        <button id="closeSettingsButton" class="cyber-btn secondary" type="button">That feels right</button>
       </div>
     </div>
 
@@ -80,16 +79,17 @@
           <span id="healthText">Health 100</span>
         </div>
         <div class="hud-right">
-          <span>Level <strong id="waveText">1</strong></span>
+          <span>Sector <strong id="waveText">1</strong></span>
         </div>
       </div>
       <canvas id="gameCanvas" width="960" height="540"></canvas>
+      <div id="storyCaption" class="story-caption" aria-live="polite">Cache: I don't know what's out there. But I don't want to be alone in here.</div>
 
       <div id="upgradeOverlay" class="overlay hidden">
         <div class="upgrade-panel">
           <div class="upgrade-header">
-            <span class="eyebrow">System upgrade</span>
-            <h2>Download Payload</h2>
+            <span class="eyebrow">Take a breath. You earned it.</span>
+            <h2>Choose what helps</h2>
           </div>
           <div id="upgradeChoices" class="upgrade-grid"></div>
         </div>
@@ -97,12 +97,13 @@
 
       <div id="gameOver" class="overlay hidden">
         <div class="overlay-card">
-          <h2>System Down</h2>
-          <button id="restartButton" class="cyber-btn primary">Restart</button>
+          <h2>Cache needs a moment</h2>
+          <p id="gameOverMessage">Cache: I need a moment. If you're ready, we can try again.</p>
+          <button id="restartButton" class="cyber-btn primary">Try again</button>
         </div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./Vibecentral.js"></script>
   </body>
 </html>
